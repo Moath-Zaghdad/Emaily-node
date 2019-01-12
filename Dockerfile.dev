@@ -9,4 +9,4 @@ RUN npm install
 #CMD tail -f /dev/null
 
 
-CMD npm run start 
+CMD npm run dev
