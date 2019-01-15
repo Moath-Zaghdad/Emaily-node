@@ -13,11 +13,6 @@ passport.serializeUser((user, done) => {
 // tacke the id from the cookie to see whoe is this persone
 passport.deserializeUser((id, done) => {
     User.findById(id).then(user => {
-        if (user) {
-            console.log('USER COOKIE EXISTS!! ');
-        } else {
-            console.log('USER COOKIE DOSE NOT EXISTS!! ');
-        }
         done(null, user);
     });
 });
